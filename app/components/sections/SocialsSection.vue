@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+
 
 type SocialLink = {
   name: string;
@@ -14,10 +14,7 @@ type SocialLink = {
   external: boolean;
 };
 
-const socialsSection = ref<HTMLElement | null>(null);
-const isVisible = ref(false);
 
-let observer: IntersectionObserver | null = null;
 
 const socialLinks: SocialLink[] = [
   {
@@ -26,7 +23,7 @@ const socialLinks: SocialLink[] = [
     description:
       "生配信、技術系トーク、日々のアーカイブ、Vlog動画や商品紹介動画を公開しています。チャンネル登録してパケットの受信待機をお願いします！",
     action: "チャンネルを見る",
-    href: "https://youtube.com/@shiomiolog",
+    href: "https://youtube.com/@skyfelis",
     icon: "fa-brands fa-youtube",
     iconStyle: "bg-red-50 text-red-500",
     actionStyle: "text-red-500",
@@ -39,7 +36,7 @@ const socialLinks: SocialLink[] = [
     description:
       "日々のつぶやきや、情報通信技術・情報法に関する話題、配信スケジュール、活動のお知らせなどを発信しています。",
     action: "ポストを見る",
-    href: "https://x.com/shiomiolog",
+    href: "https://x.com/skyfelis",
     icon: "fa-brands fa-x-twitter",
     iconStyle: "bg-slate-900 text-white",
     actionStyle: "text-slate-800",
@@ -55,8 +52,8 @@ const socialLinks: SocialLink[] = [
     href: "https://github.com/shiomiolog",
     icon: "fa-brands fa-github",
     iconStyle: "bg-slate-800 text-white",
-    actionStyle: "text-[#00CCFF]",
-    hoverStyle: "hover:border-[#00CCFF]/20 hover:bg-cyan-50/[0.01]",
+    actionStyle: "text-[#0078B8]",
+    hoverStyle: "hover:border-[#0078B8]/20 hover:bg-cyan-50/[0.01]",
     external: true,
   },
   {
@@ -73,10 +70,10 @@ const socialLinks: SocialLink[] = [
     external: false,
   },
   {
-    name: "shiomiolog Circle",
+    name: "skyfelis",
     label: "// CIRCLE",
     description:
-      "同人サークル「shiomiolog」の活動案内や、同人誌・制作物、イベントへの参加情報を掲載しています。",
+      "同人サークル「skyfelis」の活動案内や、同人誌・制作物、イベントへの参加情報を掲載しています。",
     action: "サークルサイトを見る",
     href: "https://circle.shiomiolog.com/",
     icon: "fa-solid fa-pen-nib",
@@ -87,41 +84,21 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-onMounted(() => {
-  if (!socialsSection.value) return;
 
-  observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      isVisible.value = entry?.isIntersecting ?? false;
-    },
-    { threshold: 0.15 },
-  );
-
-  observer.observe(socialsSection.value);
-});
-
-onUnmounted(() => {
-  observer?.disconnect();
-});
 </script>
 
 <template>
-  <section id="socials" ref="socialsSection"
-    class="relative z-10 bg-white px-6 py-20 font-sans antialiased transition-all duration-[1000ms] ease-out transform"
-    :class="isVisible
-        ? 'opacity-100 translate-y-0'
-        : 'opacity-0 translate-y-12'
-      ">
+  <section id="socials"
+    class="relative z-10 bg-white px-6 py-20 font-sans antialiased transition-all duration-[1000ms] ease-out transform">
     <div class="mx-auto max-w-6xl">
       <div class="mb-12 flex flex-col items-start select-none">
-        <div class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-[#00CCFF] to-[#081C44]"></div>
+        <div class="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-[#0078B8] to-[#002058]"></div>
 
-        <h2 class="text-4xl font-bold leading-none tracking-wider text-[#081C44] md:text-5xl">
+        <h2 class="text-4xl font-bold leading-none tracking-wider text-[#002058] md:text-5xl">
           Socials &amp; Links
         </h2>
 
-        <p class="pt-3 text-xs font-bold tracking-widest text-slate-400">
+        <p class="pt-3 text-xs font-bold tracking-widest text-slate-500">
           ソーシャルメディア・関連サイト
         </p>
       </div>
@@ -129,7 +106,7 @@ onUnmounted(() => {
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         <a v-for="item in socialLinks" :key="item.name" :href="item.href" :target="item.external ? '_blank' : undefined"
           :rel="item.external ? 'noopener noreferrer' : undefined"
-          class="cat-ear-card group relative flex h-full flex-col gap-4 rounded-[1.75rem] border border-slate-100 bg-slate-50/60 p-6 shadow-[0_12px_35px_rgba(8,28,68,0.02)] transition-all duration-300 hover:-translate-y-1"
+          class="cat-ear-card group relative flex h-full flex-col gap-4 rounded-2xl border border-slate-100 bg-slate-50/60 p-6 transition-all duration-300 hover:-translate-y-1"
           :class="item.hoverStyle">
           <div class="flex items-start gap-4">
             <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-base"
@@ -139,11 +116,11 @@ onUnmounted(() => {
 
             <div class="min-w-0 space-y-2">
               <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                <h3 class="text-base font-bold text-[#081C44]">
+                <h3 class="text-base font-bold text-[#002058]">
                   {{ item.name }}
                 </h3>
 
-                <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-slate-400">
+                <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-slate-500">
                   {{ item.label }}
                 </span>
               </div>

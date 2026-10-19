@@ -3,7 +3,7 @@
     class="relative min-h-screen overflow-hidden bg-[#F7FAFF] px-6 pb-28 pt-36 font-sans text-slate-800 antialiased md:pt-44"
   >
     <div
-      class="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-[#00CCFF]/10 blur-3xl"
+      class="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-[#0078B8]/10 blur-3xl"
       aria-hidden="true"
     ></div>
     <div
@@ -16,7 +16,7 @@
         <span class="mb-7 block font-mono text-xs font-bold tracking-[0.2em] text-slate-400">
           // SAFETY_POLICY: active
         </span>
-        <h1 class="text-3xl font-black leading-relaxed text-[#081C44] md:text-4xl">
+        <h1 class="text-3xl font-black leading-relaxed text-[#002058] md:text-4xl">
           カスタマーハラスメント等への対応方針
         </h1>
         <p class="mt-3 text-xs font-bold tracking-wider text-slate-400">
@@ -29,21 +29,21 @@
       >
         <div class="space-y-14 text-sm font-medium leading-loose text-slate-600 md:text-base">
           <section class="space-y-5">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="block h-7 w-1.5 rounded-full bg-[#00CCFF]" aria-hidden="true"></span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="block h-7 w-1.5 rounded-full bg-[#0078B8]" aria-hidden="true"></span>
               1. 基本方針
             </h2>
             <p>
               汐猫みおは、皆さまから寄せられる感想、意見、要望や応援の言葉を大切にし、よりよい活動につなげていきます。一方で、活動者、運営協力者、取引先、共演者およびコミュニティ参加者の安全や尊厳を損なう言動には、安心して活動と交流を継続できる環境を守るため、必要な対応を行います。
             </p>
-            <div class="rounded-3xl border border-[#00CCFF]/20 bg-[#F1FBFF] p-5 text-sm text-[#244A73]">
+            <div class="rounded-3xl border border-[#0078B8]/20 bg-[#F1FBFF] p-5 text-sm text-[#244A73]">
               本方針は、正当な批評、感想、改善要望、権利の行使または合理的配慮の申し出を一律に制限するものではありません。内容だけでなく、目的、頻度、継続性および手段・態様を踏まえて個別に判断します。
             </div>
           </section>
 
           <section class="space-y-5">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="font-mono text-sm text-[#00CCFF]" aria-hidden="true">#</span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="font-mono text-sm text-[#0078B8]" aria-hidden="true">#</span>
               2. 対象範囲と考え方
             </h2>
             <p>
@@ -55,8 +55,8 @@
           </section>
 
           <section class="space-y-6">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="font-mono text-sm text-[#00CCFF]" aria-hidden="true">#</span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="font-mono text-sm text-[#0078B8]" aria-hidden="true">#</span>
               3. 対象となる行為の例
             </h2>
             <p class="text-sm text-slate-500">
@@ -91,11 +91,11 @@
           </section>
 
           <section class="space-y-5">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="font-mono text-sm text-[#00CCFF]" aria-hidden="true">#</span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="font-mono text-sm text-[#0078B8]" aria-hidden="true">#</span>
               4. 対応
             </h2>
-            <ul class="list-disc space-y-3 pl-6 marker:text-[#00CCFF]">
+            <ul class="list-disc space-y-3 pl-6 marker:text-[#0078B8]">
               <li>お問い合わせやメッセージへの回答を行わず、以後の連絡をお断りする場合があります。</li>
               <li>コメントの削除、アカウントのミュート・ブロック・通報、オンラインコミュニティからの退出措置、イベント参加やサービス利用の制限を行う場合があります。</li>
               <li>投稿、メッセージ、アクセス記録等を証拠として保存し、プラットフォーム運営者、取引先その他の関係者と必要な情報を共有する場合があります。</li>
@@ -104,8 +104,8 @@
           </section>
 
           <section class="space-y-5">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="font-mono text-sm text-[#00CCFF]" aria-hidden="true">#</span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="font-mono text-sm text-[#0078B8]" aria-hidden="true">#</span>
               5. 皆さまへのお願い
             </h2>
             <p>
@@ -117,8 +117,8 @@
           </section>
 
           <section class="space-y-5">
-            <h2 class="flex items-center gap-3 text-xl font-black text-[#081C44]">
-              <span class="font-mono text-sm text-[#00CCFF]" aria-hidden="true">#</span>
+            <h2 class="flex items-center gap-3 text-xl font-black text-[#002058]">
+              <span class="font-mono text-sm text-[#0078B8]" aria-hidden="true">#</span>
               6. 方針の改定
             </h2>
             <p>
@@ -134,7 +134,7 @@
                 href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/seisaku06/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="font-bold text-[#3F6FBA] underline decoration-[#00CCFF]/40 underline-offset-4 hover:text-[#00CCFF]"
+                class="font-bold text-[#3F6FBA] underline decoration-[#0078B8]/40 underline-offset-4 hover:text-[#0078B8]"
               >厚生労働省「職場におけるハラスメントの防止のために」</a>
             </p>
           </div>
@@ -144,14 +144,14 @@
       <div class="mt-12 flex flex-wrap justify-center gap-4">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center gap-3 rounded-full bg-[#081C44] px-8 py-4 text-xs font-bold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-[#00CCFF] hover:text-[#081C44]"
+          class="inline-flex items-center gap-3 rounded-full bg-[#002058] px-8 py-4 text-xs font-bold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-[#0078B8] hover:text-[#002058]"
         >
           お問い合わせ
           <i class="fa-solid fa-arrow-right-long text-[10px]" aria-hidden="true"></i>
         </NuxtLink>
         <NuxtLink
           to="/"
-          class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-8 py-4 text-xs font-bold tracking-wider text-[#081C44] transition-all hover:-translate-y-0.5 hover:border-[#00CCFF]"
+          class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-8 py-4 text-xs font-bold tracking-wider text-[#002058] transition-all hover:-translate-y-0.5 hover:border-[#0078B8]"
         >
           <i class="fa-solid fa-arrow-left-long text-[10px]" aria-hidden="true"></i>
           ホームへ戻る
@@ -173,7 +173,7 @@ useSeoMeta({
   ogImage: "/ogp-image.png",
   ogType: "article",
   twitterCard: "summary_large_image",
-  twitterSite: "@shiomiolog",
-  twitterCreator: "@shiomiolog",
+  twitterSite: "@skyfelis",
+  twitterCreator: "@skyfelis",
 });
 </script>

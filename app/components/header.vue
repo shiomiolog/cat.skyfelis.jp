@@ -7,73 +7,29 @@
       ">
       <div class="flex items-center h-full">
         <NuxtLink to="/" aria-label="汐猫みお ホーム">
-          <h1>
-            <NuxtImg src="/images/logo.png" format="webp" width="512" height="341" quality="82" alt="汐猫みお"
-              class="w-24 lg:w-32 transition-transform duration-300 hover:scale-[1.02]" />
-          </h1>
+          <div>
+            <NuxtImg src="/images/logo-skyfelis.png" format="webp" width="2172" height="724" quality="82" alt="汐猫みお"
+              class="w-32 lg:w-40 transition-transform duration-300 hover:scale-[1.02]" />
+          </div>
         </NuxtLink>
       </div>
 
       <nav class="hidden lg:flex items-center" aria-label="メインナビゲーション">
         <ul class="flex items-center gap-5 border-l border-slate-200 pl-8 h-5">
-          <li>
-            <NuxtLink to="/"
+          <li v-for="item in primaryNavigation" :key="item.to">
+            <NuxtLink :to="item.to" :title="item.description"
               class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              HOME</NuxtLink>
-          </li>
-          <li>
-            <a href="/#profile"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">PROFILE</a>
-          </li>
-          <li>
-            <NuxtLink to="/news"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              NEWS</NuxtLink>
-          </li>
-          <li>
-            <a href="https://blog.shiomiolog.com/"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              BLOG
-            </a>
-          </li>
-
-          <li>
-            <a href="https://circle.shiomiolog.com/"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              CIRCLE
-            </a>
-          </li>
-          <li>
-            <a href="/#goods"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">GOODS</a>
-          </li>
-          <li>
-            <a href="/#guidance"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">GUIDANCE</a>
-          </li>
-          <li>
-            <NuxtLink to="/guideline"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              GUIDELINE</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/contact"
-              class="text-[13px] font-sans font-extrabold uppercase tracking-widest text-[#081C44] hover:text-[#00CCFF] transition-colors">
-              CONTACT</NuxtLink>
+              {{ item.label }}
+            </NuxtLink>
           </li>
         </ul>
       </nav>
 
       <div class="hidden lg:flex items-center gap-6 text-slate-400">
-        <a href="https://youtube.com/@shiomiolog" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#00CCFF] transition-colors text-lg" aria-label="YouTubeを新しいタブで開く"
-          title="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-        <a href="https://github.com/shiomiolog" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#00CCFF] transition-colors text-lg" aria-label="GitHubを新しいタブで開く"
-          title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-        <a href="https://x.com/shiomiolog" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#00CCFF] transition-colors text-lg" aria-label="Xを新しいタブで開く"
-          title="X (Twitter)"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a v-for="item in socialNavigation" :key="item.href" :href="item.href" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[#00CCFF] transition-colors text-lg" :aria-label="`${item.label}を新しいタブで開く`" :title="item.label">
+          <i :class="item.icon" aria-hidden="true"></i>
+        </a>
       </div>
 
       <button ref="menuButton" type="button" @click="openMenu"
@@ -93,8 +49,8 @@
         class="fixed inset-0 bg-white z-[60] lg:hidden flex flex-col h-screen w-screen overflow-hidden">
         <div class="flex items-center justify-between w-full pt-2.5 px-5 shrink-0"
           :class="isScrolled ? 'mt-3 mx-4 w-[calc(100%-2rem)]' : 'mt-0'">
-          <NuxtImg src="/images/logo.png" format="webp" width="384" height="256" quality="82" alt="汐猫みお"
-            class="w-24 opacity-90" />
+          <NuxtImg src="/images/logo-skyfelis.png" format="webp" width="2172" height="724" quality="82" alt="汐猫みお"
+            class="w-32 opacity-90" />
 
           <button ref="closeMenuButton" type="button" @click="closeMenu"
             class="flex flex-col justify-center items-center w-8.5 h-8.5 rounded-full bg-slate-50 text-[#081C44] border border-slate-100 shadow-sm"
@@ -109,59 +65,19 @@
         <div class="flex-1 flex flex-col items-center px-8 overflow-y-auto py-8">
           <nav class="w-full text-center my-auto space-y-8" aria-label="モバイルナビゲーション">
             <ul class="space-y-4 text-lg font-sans font-black tracking-[0.2em] text-[#081C44] uppercase">
-              <li>
-                <NuxtLink to="/" @click="closeMenu" class="hover:text-[#00CCFF] transition-colors block py-1">
-                  HOME</NuxtLink>
-              </li>
-              <li>
-                <a href="/#profile" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">PROFILE</a>
-              </li>
-              <li>
-                <NuxtLink to="/news" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">NEWS</NuxtLink>
-              </li>
-              <li>
-                <a href="https://blog.shiomiolog.com/" @click="closeMenu"
+              <li v-for="item in primaryNavigation" :key="item.to">
+                <NuxtLink :to="item.to" :title="item.description" @click="closeMenu"
                   class="hover:text-[#00CCFF] transition-colors block py-1">
-                  BLOG
-                </a>
-              </li>
-
-              <li>
-                <a href="https://circle.shiomiolog.com/" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">
-                  CIRCLE
-                </a>
-              </li>
-              <li>
-                <a href="/#goods" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">GOODS</a>
-              </li>
-              <li>
-                <a href="/#guidance" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">GUIDANCE</a>
-              </li>
-              <li>
-                <NuxtLink to="/guideline" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">GUIDELINE</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/contact" @click="closeMenu"
-                  class="hover:text-[#00CCFF] transition-colors block py-1">CONTACT</NuxtLink>
+                  {{ item.label }}
+                </NuxtLink>
               </li>
             </ul>
 
             <div class="flex items-center justify-center gap-8 text-slate-400 text-lg pt-4">
-              <a href="https://youtube.com/@shiomiolog" target="_blank" rel="noopener noreferrer" @click="closeMenu"
-                class="hover:text-[#00CCFF] transition-colors" aria-label="YouTubeを新しいタブで開く"><i
-                  class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-              <a href="https://github.com/shiomiolog" target="_blank" rel="noopener noreferrer" @click="closeMenu"
-                class="hover:text-[#00CCFF] transition-colors" aria-label="GitHubを新しいタブで開く"><i
-                  class="fa-brands fa-github" aria-hidden="true"></i></a>
-              <a href="https://x.com/shiomiolog" target="_blank" rel="noopener noreferrer" @click="closeMenu"
-                class="hover:text-[#00CCFF] transition-colors" aria-label="Xを新しいタブで開く"><i
-                  class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              <a v-for="item in socialNavigation" :key="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" @click="closeMenu"
+                class="hover:text-[#00CCFF] transition-colors" :aria-label="`${item.label}を新しいタブで開く`">
+                <i :class="item.icon" aria-hidden="true"></i>
+              </a>
             </div>
           </nav>
         </div>
@@ -172,6 +88,7 @@
 
 <script setup lang="ts">
 import { nextTick, ref, onMounted, onUnmounted } from "vue";
+import { primaryNavigation, socialNavigation } from "~/utils/navigation";
 
 const isScrolled = ref(false);
 const isMenuOpen = ref(false);

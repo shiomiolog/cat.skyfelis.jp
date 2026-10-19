@@ -12,7 +12,7 @@
         </div>
 
         <h1
-          class="text-2xl md:text-3xl font-sans font-black text-[#081C44] leading-relaxed pb-3 text-center"
+          class="text-2xl md:text-3xl font-sans font-black text-[#002058] leading-relaxed pb-3 text-center"
         >
           二次創作ガイドライン
         </h1>
@@ -27,10 +27,10 @@
         >
           <section class="space-y-4">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-3 pl-0"
             >
               <span
-                class="w-1.5 h-6 bg-[#00CCFF] rounded-full block animate-pulse"
+                class="w-1.5 h-6 bg-[#0078B8] rounded-full block animate-pulse"
               ></span>
               （目的）
             </h2>
@@ -49,9 +49,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第1条（二次創作に関する基本原則）
             </h2>
 
@@ -61,7 +61,7 @@
                   >1.</span
                 >
                 <div class="flex-1">
-                  二次創作活動は、<strong class="text-[#081C44]"
+                  二次創作活動は、<strong class="text-[#002058]"
                     >利用者が個人的かつ非営利の目的で</strong
                   >行う場合に限り許可されます。
                 </div>
@@ -166,10 +166,10 @@
                 >
                 <div class="flex-1">
                   本コンテンツの複製物または二次創作物を公開する場合、利用者は、<strong
-                    class="text-[#081C44] underline decoration-[#00CCFF]/50 font-black"
+                    class="text-[#002058] underline decoration-[#0078B8]/50 font-black"
                     >「©汐猫みお」</strong
                   >または<strong
-                    class="text-[#081C44] underline decoration-[#00CCFF]/50 font-black"
+                    class="text-[#002058] underline decoration-[#0078B8]/50 font-black"
                     >「原作：汐猫みお」</strong
                   >等、当方に関する情報を明記するものとします。
                 </div>
@@ -195,9 +195,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第2条（成人向け表現に関する特則）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -206,7 +206,7 @@
                   >1.</span
                 >
                 <div class="flex-1">
-                  性的、グロテスク、その他<strong class="text-[#081C44]"
+                  性的、グロテスク、その他<strong class="text-[#002058]"
                     >ゾーニングが必要な内容</strong
                   >を含む二次創作物については、当方は原則として禁止しません。
                 </div>
@@ -234,9 +234,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第3条（同人活動および販売に関する特則）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -261,9 +261,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第4条（切り抜き動画に関する特則）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -297,9 +297,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第5条（応援広告および二次創作イベントに関する特則）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -365,9 +365,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第6条（AI生成ファンアートに関する特則）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -395,9 +395,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第10条（準拠法および合意管轄）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -412,9 +412,9 @@
                   >2.</span
                 >
                 <div class="flex-1">
-                  紛争は、<strong class="text-[#081C44] font-black"
+                  紛争は、<strong class="text-[#002058] font-black"
                     >東京簡易裁判所</strong
-                  >または<strong class="text-[#081C44] font-black"
+                  >または<strong class="text-[#002058] font-black"
                     >東京地方裁判所</strong
                   >を専属的合意管轄裁判所とします。
                 </div>

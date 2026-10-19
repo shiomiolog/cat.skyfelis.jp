@@ -17,20 +17,20 @@
         </div>
 
         <div class="flex items-center gap-3 text-sm font-mono mb-5">
-          <span class="text-[#081C44]/50 font-bold select-none">
+          <span class="text-[#002058]/50 font-bold select-none">
             {{ route.meta.year }}/{{
               String(route.meta.date ?? "").replace(".", "/")
             }}
           </span>
           <span
-            class="bg-gradient-to-r from-[#00CCFF] to-[#081C44] text-white text-[10px] font-sans font-bold px-3 py-0.5 rounded-full shadow-sm"
+            class="bg-gradient-to-r from-[#0078B8] to-[#002058] text-white text-[10px] font-sans font-bold px-3 py-0.5 rounded-full shadow-sm"
           >
             {{ route.meta.category || "お知らせ" }}
           </span>
         </div>
 
         <h1
-          class="text-xl md:text-2xl font-sans font-black text-[#081C44] leading-relaxed pb-6 border-b border-slate-200"
+          class="text-xl md:text-2xl font-sans font-black text-[#002058] leading-relaxed pb-6 border-b border-slate-200"
         >
           {{ route.meta.title }}
         </h1>
@@ -44,7 +44,7 @@
         <div class="mt-16 flex justify-center">
           <NuxtLink
             to="/news"
-            class="bg-gradient-to-r from-[#00CCFF]/90 to-[#081C44]/90 hover:from-[#00CCFF] hover:to-[#081C44] text-white px-12 py-3.5 rounded-2xl font-sans font-bold text-xs tracking-widest transition-all duration-300 shadow-[0_10px_25px_rgba(8,28,68,0.12)] hover:shadow-[0_15px_30px_rgba(8,28,68,0.22)] hover:-translate-y-0.5 flex items-center justify-between min-w-[240px] group"
+            class="bg-gradient-to-r from-[#0078B8]/90 to-[#002058]/90 hover:from-[#0078B8] hover:to-[#002058] text-white px-12 py-3.5 rounded-2xl font-sans font-bold text-xs tracking-widest transition-all duration-300 shadow-[0_10px_25px_rgba(8,28,68,0.12)] hover:shadow-[0_15px_30px_rgba(8,28,68,0.22)] hover:-translate-y-0.5 flex items-center justify-between min-w-[240px] group"
           >
             <i
               class="fa-solid fa-paw text-sm opacity-80 group-hover:rotate-[15deg] transition-transform"

@@ -3,7 +3,7 @@
     <button
       v-show="showButton"
       @click="scrollToTop"
-      class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[#0B0F19] text-[#00CCFF] border border-[#00CCFF]/30 flex items-center justify-center shadow-[0_10px_30px_rgba(0,204,255,0.15)] hover:bg-[#00CCFF] hover:text-[#081C44] hover:border-[#00CCFF] transition-all duration-300 group focus:outline-none"
+      class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-[#0B0F19] text-[#0078B8] border border-[#0078B8]/30 flex items-center justify-center shadow-[0_10px_30px_rgba(0,204,255,0.15)] hover:bg-[#0078B8] hover:text-[#002058] hover:border-[#0078B8] transition-all duration-300 group focus:outline-none"
       aria-label="トップへ戻る"
     >
       <i

@@ -1,18 +1,16 @@
 <template>
-  <section id="activity" ref="newsSection"
-    class="bg-[#1E1B4B] py-24 px-6 transition-all duration-[1000ms] ease-out transform font-sans antialiased relative z-35 shadow-[0_25px_60px_rgba(0,0,0,0.25)]"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      ">
+  <section id="activity"
+    class="bg-[#002058] py-24 px-6 transition-all duration-[1000ms] ease-out transform font-sans antialiased relative z-35">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
         <div class="lg:col-span-4 flex flex-col items-start select-none">
-          <div class="w-12 h-1 bg-gradient-to-r from-[#00CCFF] to-white/10 rounded-full mb-4"></div>
+          <div class="w-12 h-1 bg-gradient-to-r from-[#0078B8] to-white/10 rounded-full mb-4"></div>
 
           <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-wider text-white leading-none">
             News
           </h2>
 
-          <p class="text-xs font-sans font-bold text-[#00CCFF] tracking-widest pt-3">
+          <p class="text-xs font-sans font-bold text-[#0078B8] tracking-widest pt-3">
             最新情報
           </p>
         </div>
@@ -29,7 +27,7 @@
 
             <div class="flex-1">
               <h3
-                class="text-sm md:text-base font-sans font-medium text-slate-200 group-hover:text-[#00CCFF] transition-colors duration-300 leading-relaxed">
+                class="text-sm md:text-base font-sans font-medium text-slate-200 group-hover:text-[#0078B8] transition-colors duration-300 leading-relaxed">
                 {{ item.title }}
               </h3>
             </div>
@@ -39,7 +37,7 @@
 
       <div class="mt-16 flex justify-center">
         <NuxtLink to="/news"
-          class="bg-white text-[#081C44] hover:bg-[#00CCFF] hover:text-[#081C44] px-10 py-3.5 rounded-full font-sans font-bold text-xs tracking-widest transition-all duration-300 shadow-lg flex items-center gap-3 group">
+          class="bg-white text-[#002058] hover:bg-[#0078B8] hover:text-[#002058] px-10 py-3.5 rounded-full font-sans font-bold text-xs tracking-widest transition-all duration-300 shadow-lg flex items-center gap-3 group">
           最新情報一覧
           <i
             class="fa-solid fa-arrow-right text-[10px] transition-transform duration-300 group-hover:translate-x-1"></i>
@@ -50,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -77,21 +75,5 @@ const latestNews = router
   })
   .slice(0, 2); // 最新の2件を安全にスライス
 
-const isVisible = ref(false);
-const newsSection = ref<HTMLElement | null>(null);
 
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          isVisible.value = true;
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 },
-  );
-  if (newsSection.value) observer.observe(newsSection.value);
-});
 </script>

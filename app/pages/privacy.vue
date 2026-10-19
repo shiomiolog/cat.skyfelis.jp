@@ -12,7 +12,7 @@
         </div>
 
         <h1
-          class="text-2xl md:text-3xl font-sans font-black text-[#081C44] leading-relaxed pb-3 text-center"
+          class="text-2xl md:text-3xl font-sans font-black text-[#002058] leading-relaxed pb-3 text-center"
         >
           プライバシーポリシー
         </h1>
@@ -31,10 +31,10 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-3 pl-0"
             >
               <span
-                class="w-1.5 h-6 bg-[#00CCFF] rounded-full block animate-pulse"
+                class="w-1.5 h-6 bg-[#0078B8] rounded-full block animate-pulse"
               ></span>
               第1条（個人情報の利用目的）
             </h2>
@@ -64,9 +64,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第2条（個人情報の第三者提供）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -93,9 +93,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-2 border-b border-slate-100 pb-3 pl-0"
             >
-              <span class="text-[#00CCFF] font-mono text-sm">#</span>
+              <span class="text-[#0078B8] font-mono text-sm">#</span>
               第3条（免責事項）
             </h2>
             <div class="space-y-4 text-slate-500">
@@ -128,9 +128,9 @@
 
           <section class="space-y-5">
             <h2
-              class="text-lg font-black text-[#081C44] flex items-center gap-3 pl-0"
+              class="text-lg font-black text-[#002058] flex items-center gap-3 pl-0"
             >
-              <span class="w-1.5 h-6 bg-[#00CCFF] rounded-full block"></span>
+              <span class="w-1.5 h-6 bg-[#0078B8] rounded-full block"></span>
               第4条（お問い合わせ）
             </h2>
             <div class="pl-5 text-slate-500">

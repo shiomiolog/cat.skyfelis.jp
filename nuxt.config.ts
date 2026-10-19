@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   // ★【アップデート】@nuxt/image をモジュール回路に完全結合！
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
 
+  css: ["~/assets/css/design.css"],
+
   app: {
     head: {
       htmlAttrs: {
