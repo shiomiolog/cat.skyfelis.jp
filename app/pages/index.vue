@@ -38,7 +38,7 @@ useSeoMeta({
     "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫Virtual YouTuber「汐猫みお」の公式サイトです。",
   ogDescription:
     "情報セキュリティと情報法を学びながら、プログラミング、ゲーム、旅行などの話題を気ままに発信する、青い世界の猫 Virtual YouTuber「汐猫みお」の公式ポータルサイトです。",
-  ogImage: "/ogp-image.png",
+  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
   twitterCard: "summary_large_image",
   twitterSite: "@skyfelis",
   twitterCreator: "@skyfelis",

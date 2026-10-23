@@ -170,7 +170,7 @@ useSeoMeta({
   description,
   ogTitle: "カスタマーハラスメント等への対応方針 | 汐猫みお Official Site",
   ogDescription: description,
-  ogImage: "/ogp-image.png",
+  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
   ogType: "article",
   twitterCard: "summary_large_image",
   twitterSite: "@skyfelis",

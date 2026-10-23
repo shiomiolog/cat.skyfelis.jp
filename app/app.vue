@@ -15,7 +15,21 @@ const canonicalUrl = computed(() => `https://skyfelis.jp${route.path}`);
 useHead(() => ({
   link: [{ rel: "canonical", href: canonicalUrl.value }],
 }));
-useSeoMeta({ ogUrl: () => canonicalUrl.value });
+useSeoMeta({
+  ogUrl: () => canonicalUrl.value,
+  ogSiteName: "汐猫みお Official Site",
+  ogLocale: "ja_JP",
+  ogImage: "https://skyfelis.jp/ogp-v4.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: "image/jpeg",
+  ogImageAlt: "汐猫みお公式サイト：新ロゴと紺色スーツ姿のVersion 4アバター",
+  twitterCard: "summary_large_image",
+  twitterImage: "https://skyfelis.jp/ogp-v4.jpg",
+  twitterImageAlt: "汐猫みお公式サイト：新ロゴと紺色スーツ姿のVersion 4アバター",
+  twitterSite: "@skyfelis",
+  twitterCreator: "@skyfelis",
+});
 </script>
 
 <style>
