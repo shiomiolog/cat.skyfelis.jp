@@ -1,209 +1,88 @@
 <template>
   <section id="model-spec"
-    class="bg-white py-24 px-6 relative z-20 border-t border-slate-100 transition-all duration-[1000ms] ease-out transform font-sans antialiased">
-
-    <div class="max-w-6xl mx-auto relative z-10">
-      <div class="mb-16 grid grid-cols-1 md:grid-cols-12 gap-6 items-end relative z-30 select-none">
-        <div class="md:col-span-7 flex flex-col items-start">
+    class="bg-white py-24 px-6 relative border-t border-slate-100 font-sans antialiased">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+        <div>
           <div class="w-12 h-1 bg-gradient-to-r from-[#0078B8] to-[#002058] rounded-full mb-4"></div>
-
-          <h2 class="text-4xl md:text-5xl font-sans font-bold tracking-wider text-[#002058] leading-none">
-            3D Model
-          </h2>
-
-          <p class="text-xs font-sans font-bold text-slate-500 tracking-widest pt-3">
-            3Dモデル紹介・スペック
-          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-[#002058] leading-none">3D Model</h2>
+          <p class="text-xs text-slate-500 tracking-widest pt-3">キャラクターデザイン・3Dモデル</p>
         </div>
-
-        <div class="md:col-span-5 flex flex-wrap items-center justify-start md:justify-end gap-4">
-          <div
-            class="bg-[#002058] text-white font-mono text-[11px] font-bold px-4 py-2 rounded-full shadow-lg border-2 border-white flex items-center gap-1.5 select-none">
-            <i class="fa-solid fa-heart text-[#0078B8]" aria-hidden="true"></i> Version: 2.0.1
-          </div>
-
-          <div
-            class="flex items-center gap-2 bg-slate-50 p-1.5 rounded-full border border-slate-100 shadow-inner relative z-10"
-            role="group" aria-label="三面図の表示切り替え">
-            <button type="button" @click="activeTab = 'illustration'"
-              :aria-pressed="activeTab === 'illustration'" aria-controls="model-spec-panel"
-              class="px-6 py-2.5 rounded-full text-sm font-black flex items-center gap-2 transition-all duration-300"
-              :class="activeTab === 'illustration'
-                ? 'bg-gradient-to-r from-[#0078B8] to-[#002058] text-white shadow-md'
-                : 'text-slate-500 hover:text-[#002058]'
-                ">
-              <i class="fa-solid fa-pen-nib text-xs opacity-80" aria-hidden="true"></i> イラスト版
-            </button>
-            <button type="button" @click="activeTab = 'model'"
-              :aria-pressed="activeTab === 'model'" aria-controls="model-spec-panel"
-              class="px-6 py-2.5 rounded-full text-sm font-black flex items-center gap-2 transition-all duration-300"
-              :class="activeTab === 'model'
-                ? 'bg-gradient-to-r from-[#0078B8] to-[#002058] text-white shadow-md'
-                : 'text-slate-500 hover:text-[#002058]'
-                ">
-              <i class="fa-solid fa-cube text-xs opacity-80" aria-hidden="true"></i> 3Dモデル版
-            </button>
-          </div>
-        </div>
+        <span class="bg-[#002058] text-white font-mono text-xs px-4 py-2 rounded-full">Version 4</span>
       </div>
 
-      <div
-        class="mt-12 mb-16 relative bg-white rounded-2xl border-4 border-dashed border-slate-100 group overflow-hidden">
-        <div id="model-spec-panel" class="w-full grid grid-cols-1 grid-rows-1 p-0 relative z-10"
-          role="region" aria-live="polite" :aria-label="activeTab === 'illustration' ? 'イラスト版の三面図' : '3Dモデル版の三面図'">
-          <transition name="fade">
-            <NuxtImg v-if="activeTab === 'illustration'" key="illustration" src="/images/blueprint_illustration.png"
-              format="webp" alt="汐猫みお 三面図（イラスト版）"
-              class="col-start-1 row-start-1 w-full h-auto rounded-[2rem] transition-transform duration-500 group-hover:scale-[1.01]"
-              @error="
-                (e: any) =>
-                (e.target.src =
-                  'https://placehold.co/1200x600/FAFCFE/00CCFF?text=私のかわいい三面図（イラスト版）！')
-              " />
-            <NuxtImg v-else key="model" src="/images/blueprint_model.png" format="webp" alt="汐猫みお 三面図（3Dモデル版）"
-              class="col-start-1 row-start-1 w-full h-auto rounded-[2rem] transition-all duration-500 group-hover:scale-[1.01]"
-              @error="
-                (e: any) =>
-                (e.target.src =
-                  'https://placehold.co/1200x600/FAFCFE/00CCFF?text=私のかわいい三面図（3Dモデル版）！')
-              " />
-          </transition>
-        </div>
+      <p class="mb-6 text-sm text-slate-600 leading-loose">
+        紺色のスーツに、猫耳と眼鏡。汐猫みおのオリジナルアバターです。
+      </p>
+
+      <div class="model-switch" role="group" aria-label="設定画と3Dモデルの表示切り替え">
+        <button v-for="view in views" :key="view.id" type="button"
+          :aria-pressed="activeView === view.id" aria-controls="model-spec-panel"
+          :class="{ 'is-active': activeView === view.id }" @click="activeView = view.id">
+          {{ view.label }}
+        </button>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start relative z-20">
-        <div
-          class="cat-ear-card bg-white p-9 rounded-2xl border border-slate-100 space-y-7">
-          <div class="flex items-center gap-3 border-b border-slate-100 pb-5">
-            <span class="text-xl font-black text-[#002058] flex items-center gap-2.5">
-              <i class="fa-solid fa-sparkles text-[#0078B8]"></i> スペック
-            </span>
-            <span class="text-xs font-bold text-slate-500">ベース: VRoid Studio</span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-1">
-              <span class="text-xs font-extrabold text-slate-500">フォーマット</span>
-              <span class="text-base font-bold text-[#002058] block">VRM 1.0</span>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-1">
-              <span class="text-xs font-extrabold text-slate-500">ポリゴン数</span>
-              <span class="text-base font-bold text-[#002058] block">55,818 tris</span>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-1">
-              <span class="text-xs font-extrabold text-slate-500">マテリアル数</span>
-              <span class="text-base font-bold text-[#002058] block">8</span>
-            </div>
-            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-1">
-              <span class="text-xs font-extrabold text-slate-500">ボーン数</span>
-              <span class="text-base font-bold text-[#002058] block">123</span>
-            </div>
-            <div class="col-span-2 bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-1">
-              <span class="text-xs font-extrabold text-slate-500">使用シェーダー</span>
-              <span class="text-base font-bold text-[#002058] block">MToon (VRoid標準)</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="cat-ear-card bg-white p-9 rounded-2xl border border-slate-100 space-y-7">
-          <div class="border-b border-slate-100 pb-5">
-            <h3 class="text-xl font-black text-[#002058] flex items-center gap-2.5">
-              <i class="fa-solid fa-ribbon text-[#0078B8]"></i> 使用した素材
-            </h3>
-            <p class="text-xs font-bold text-slate-500 mt-1">
-              BOOTHの素敵な素材たちを使わせてもらっています. 感謝！
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1.5 scrollbar-thin">
-            <a v-for="asset in assets" :key="asset.item" :href="asset.url" target="_blank" rel="noopener noreferrer"
-              class="flex flex-col justify-between p-4 rounded-2xl border border-slate-100 bg-white hover:bg-slate-50 hover:border-[#0078B8]/30 transition-all duration-200 group">
-              <div>
-                <span class="block text-[10px] font-extrabold text-slate-500 tracking-wider truncate mb-1.5">
-                  <i class="fa-solid fa-store text-[8px] mr-1"></i>{{ asset.shop }}
-                </span>
-                <span
-                  class="text-sm font-bold text-[#002058] group-hover:text-[#0078B8] transition-colors leading-snug block">
-                  {{ asset.item }}
-                </span>
-              </div>
-              <div
-                class="flex justify-end items-center mt-3 text-[10px] font-bold text-slate-300 group-hover:text-[#0078B8] transition-colors gap-1.5">
-                BOOTH
-                <i class="fa-solid fa-up-right-from-square text-[8px]"></i>
-              </div>
-            </a>
-          </div>
-        </div>
+      <div id="model-spec-panel" class="model-panel" role="region" :aria-label="selectedView.description">
+        <Transition name="model-fade" mode="out-in">
+          <NuxtImg :key="selectedView.id" :src="selectedView.src" format="webp" quality="88"
+            :width="selectedView.width" :height="selectedView.height" sizes="sm:100vw lg:1152px"
+            loading="lazy" decoding="async" :alt="selectedView.description"
+            class="w-full h-auto" />
+        </Transition>
       </div>
+
+      <p class="mt-5 text-xs text-slate-500 leading-relaxed">キャラクター・モデル素材：オリジナル／自作</p>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
-const activeTab = ref<"illustration" | "model">("illustration");
-
-interface Asset {
-  shop: string;
-  item: string;
-  url: string;
-}
-
-// ★【データパッチ】みおさん提供のリアルな使用素材クレジットデータを完全マウント
-const assets: Asset[] = [
+const views = [
   {
-    shop: "Team.Aether",
-    item: "Skin Texture",
-    url: "https://teamaether.booth.pm/items/1247301",
+    id: 'model', label: '3Dモデル', src: '/images/model-v4-views.png', width: 1920, height: 1080,
+    description: '汐猫みお Version 4：紺色のスーツを着た3Dモデルの正面・背面・左右側面',
   },
   {
-    shop: "しらとりこはね【とりんご】",
-    item: "Hair & Face Textures",
-    url: "https://shiratori.booth.pm/items/3190732",
+    id: 'design', label: '設定画', src: '/images/model-v4-design.png', width: 1672, height: 941,
+    description: '汐猫みお Version 4：猫耳・眼鏡・紺色のスーツのキャラクター設定画',
   },
-  {
-    shop: "もねこ屋。",
-    item: "【VRoid正式版】病みかわパーカーセットB",
-    url: "https://yuzumone.booth.pm/items/4337378",
-  },
-  {
-    shop: "VRoid基本素材-VRoid Basic Presets Store",
-    item: "【VRoid】アニメ風髪テクスチャ集３",
-    url: "https://vroid-tex.booth.pm/items/3010020",
-  },
-];
-
-// 画面内にスクロールインした際のスムーズなアニメーション制御を復旧
+] as const;
+const activeView = ref<'model' | 'design'>('model');
+const selectedView = computed(() => views.find(view => view.id === activeView.value) ?? views[0]);
 </script>
 
 <style scoped>
-.scrollbar-thin::-webkit-scrollbar {
-  width: 5px;
+.model-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
 }
-
-.scrollbar-thin::-webkit-scrollbar-track {
-  background: transparent;
+.model-switch button {
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  color: #526b83;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background-color .2s, color .2s;
 }
-
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+.model-switch button:hover { color: var(--navy); }
+.model-switch button.is-active { background: var(--navy); color: white; }
+.model-panel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  aspect-ratio: 16 / 9;
 }
-
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #00ccff;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.model-fade-enter-active, .model-fade-leave-active { transition: opacity .18s ease; }
+.model-fade-enter-from, .model-fade-leave-to { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .model-switch button, .model-fade-enter-active, .model-fade-leave-active { transition: none; }
 }
 </style>

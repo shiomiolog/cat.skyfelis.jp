@@ -16,9 +16,8 @@ export const socialNavigation = [
 export const footerNavigation = [
   { label: "Contents", links: primaryNavigation.slice(0, 4) },
   { label: "Links", links: [
-    { label: "Blog", description: "ブログ", to: "https://blog.shiomiolog.com/" },
-    { label: "skyfelis", description: "同人サークル", to: "https://circle.shiomiolog.com/" },
-    { label: "GitHub", description: "ソースコード", to: "https://github.com/shiomiolog" },
+    { label: "Blog", description: "ブログ", to: "https://blog.skyfelis.jp/" },
+    { label: "GitHub", description: "ソースコード", to: "https://github.com/skyfelis" },
   ] },
   { label: "Support", links: [
     { label: "Guidance", description: "ご依頼について", to: "/#guidance" },

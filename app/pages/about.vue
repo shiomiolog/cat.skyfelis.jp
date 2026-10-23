@@ -40,7 +40,7 @@
 
         <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
           <a
-            href="https://portfolio.shiomiolog.com/"
+            href="https://portfolio.skyfelis.jp/"
             target="_blank"
             rel="noopener noreferrer"
             class="group flex min-h-52 flex-col justify-between rounded-3xl border border-slate-100 bg-[#F8FCFF] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#0078B8]/40 hover:shadow-[0_18px_40px_rgba(0,204,255,0.12)]"
@@ -61,7 +61,7 @@
             <div
               class="mt-7 flex items-center justify-between font-mono text-[11px] font-bold tracking-wide text-slate-400"
             >
-              <span>portfolio.shiomiolog.com</span>
+              <span>portfolio.skyfelis.jp</span>
               <i
                 class="fa-solid fa-arrow-up-right-from-square transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               ></i>

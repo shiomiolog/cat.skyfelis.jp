@@ -17,8 +17,7 @@
       <div class="hero-visual">
         <span class="hero-visual-label" aria-hidden="true">HELLO, WORLD.</span>
         <picture class="hero-character">
-          <source v-if="!motionPaused" media="(prefers-reduced-motion: no-preference)" srcset="/images/animation.webp" type="image/webp" />
-          <img src="/images/char-hero-current.png" alt="汐猫みおの全身ビジュアル" width="941" height="1672" fetchpriority="high" decoding="async" />
+          <img src="/images/hero-v4.png" alt="紺色のスーツ姿で手を振る汐猫みお Version 4" width="1024" height="1536" fetchpriority="high" decoding="async" />
         </picture>
         <span class="hero-signature" aria-hidden="true">SHIONE MIO <span>01</span></span>
       </div>

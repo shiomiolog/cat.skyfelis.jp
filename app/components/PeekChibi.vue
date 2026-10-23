@@ -2,12 +2,12 @@
   <Transition name="chibi-peek">
     <div v-if="isReady && isEnabled && isPeeking" class="peek-chibi">
       <NuxtImg
-        src="/images/peek-chibi-desk.png"
+        src="/images/chibi-v4.png"
         format="webp"
         quality="82"
         alt=""
-        width="656"
-        height="600"
+        width="1254"
+        height="1254"
         loading="lazy"
         decoding="async"
       />

@@ -28,7 +28,7 @@
                 <div class="flex-1 h-[1px] bg-slate-200"></div>
               </div>
 
-              <a href="https://shiomiolog.booth.pm/" target="_blank" rel="noopener noreferrer"
+              <a href="https://skyfelis.booth.pm/" target="_blank" rel="noopener noreferrer"
                 class="bg-[#002058] text-white rounded-full py-4 px-7 flex items-center justify-between hover:bg-[#0078B8] hover:text-[#002058] transition-all duration-300 group font-bold text-sm tracking-wider">
                 <span>汐猫みお公式BOOTH</span>
                 <i class="fa-solid fa-arrow-right-long text-xs transition-transform duration-300 group-hover:translate-x-1.5"
@@ -66,8 +66,8 @@
           <div class="absolute bottom-16 right-4 h-16 w-16 rounded-full bg-[#0078B8]/10" aria-hidden="true"></div>
           <div class="absolute left-4 top-16 h-10 w-10 rounded-full bg-[#548BE2]/10" aria-hidden="true"></div>
 
-          <NuxtImg src="/images/goods-chibi-plush.png" format="webp" loading="lazy" decoding="async"
-            alt="汐猫みおのぬいぐるみを両手で掲げるミニキャラの汐猫みお"
+          <NuxtImg src="/images/chibi-v4.png" format="webp" loading="lazy" decoding="async"
+            alt="スーツ姿で手を振るミニキャラの汐猫みお"
             class="relative z-10 max-h-[350px] w-auto object-contain lg:max-h-[460px]" />
         </div>
       </div>

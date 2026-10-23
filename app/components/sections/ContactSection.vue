@@ -28,12 +28,12 @@
               class="absolute bottom-0 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-gradient-to-br from-[#DDF5FF] to-[#E9EEFF] md:h-64 md:w-64"
             ></div>
             <NuxtImg
-              src="/images/contact-chibi-flat.png"
+              src="/images/chibi-guide-v4.png"
               format="webp"
               quality="82"
-              alt="お問い合わせをご案内する汐猫みお"
-              width="720"
-              height="900"
+              alt="両手を広げてお問い合わせをご案内するミニキャラの汐猫みお"
+              width="1254"
+              height="1254"
               loading="lazy"
               class="relative z-10 h-[285px] w-auto object-contain md:h-[390px] lg:h-[430px]"
             />

@@ -55,7 +55,7 @@
                 class="max-h-full max-w-full object-contain transition-all duration-300" />
             </div>
 
-            <div class="flex gap-3 justify-center items-center">
+            <div v-if="assetList.length > 1" class="flex gap-3 justify-center items-center">
               <button v-for="img in assetList" :key="img.src" type="button" @click="activeImage = img.src"
                 class="w-12 h-12 rounded-full overflow-hidden border-2 bg-white transition-all shadow-sm relative group"
                 :aria-label="`${img.label}の画像を表示`" :aria-pressed="activeImage === img.src"
@@ -77,12 +77,12 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 
-const activeImage = ref("/images/char-hero-current.png");
+const activeImage = ref("/images/hero-v4.png");
 
 const assetList = [
-  { src: "/images/char-hero-current.png", label: "通常衣装" },
-  { src: "/images/char-relax-current.png", label: "リラックス" },
-  { src: "/images/char-up-current.png", label: "アップ" },
+  { src: "/images/hero-v4.png", label: "Version 4・スーツ" },
+  { src: "/images/profile-relax-v4.png", label: "リラックス" },
+  { src: "/images/profile-close-v4.png", label: "アップ" },
 ];
 
 const activeLabel = computed(

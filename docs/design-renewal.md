@@ -32,7 +32,7 @@ Contentsは既存YouTubeチャンネルへの導線。架空の動画・サム�
 
 ## ブランド移行とモデル差替え
 
-移行予定日は2027-01-01、予定URLは https://skyfelis.jp/ 、IDは @skyfelis。追加指示に従い、YouTube・XのリンクとSNSメタデータを @skyfelis に更新し、全ページのcanonical・og:urlを https://skyfelis.jp/ 基準に設定。DNS・リダイレクト・デプロイ構成は変更しない。GitHub、BOOTH、ブログ、ポートフォリオは別用途のため既存リンクと名称を維持する。同人サークル名は追加指示に従い skyfelis に更新し、リンク先は既存の https://circle.shiomiolog.com/ を維持する。
+移行予定日は2027-01-01、予定URLは https://skyfelis.jp/ 、IDは @skyfelis。追加指示に従い、YouTube・XのリンクとSNSメタデータを @skyfelis に更新し、全ページのcanonical・og:urlを https://skyfelis.jp/ 基準に設定。DNS・リダイレクト・デプロイ構成は変更しない。全アカウントのIDは skyfelis に統一する。GitHubは https://github.com/skyfelis 、BOOTHは https://skyfelis.booth.pm/ 。ブログは https://blog.skyfelis.jp/ 、ポートフォリオは https://portfolio.skyfelis.jp/ に更新。サークルへのリンク・紹介カードは追加指示に従い掲載しない。
 
 ロゴは public/images/logo-skyfelis.png。新モデル未提供のため現行ビジュアルを使用。通常は既存アニメーションWebP、動き停止時とprefers-reduced-motionでは静止画を使用。Hero.vueの画像、ProfileSection.vueのassetList、ModelSpec.vueの三面図・スペックは、新モデルの正式な素材と値が揃った時点で更新する。旧画像は削除しない。
 

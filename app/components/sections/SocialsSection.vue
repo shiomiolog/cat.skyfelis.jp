@@ -49,7 +49,7 @@ const socialLinks: SocialLink[] = [
     description:
       "Webサイトやツールなど、制作・開発しているソフトウェアのソースコードを公開しています。",
     action: "GitHubを見る",
-    href: "https://github.com/shiomiolog",
+    href: "https://github.com/skyfelis",
     icon: "fa-brands fa-github",
     iconStyle: "bg-slate-800 text-white",
     actionStyle: "text-[#0078B8]",
@@ -62,24 +62,11 @@ const socialLinks: SocialLink[] = [
     description:
       "日々の出来事や活動のお知らせ、学んだこと、イベントへの参加記録などを文章で発信しています。",
     action: "ブログを読む",
-    href: "https://blog.shiomiolog.com/",
+    href: "https://blog.skyfelis.jp/",
     icon: "fa-solid fa-book-open",
     iconStyle: "bg-amber-500 text-white",
     actionStyle: "text-amber-600",
     hoverStyle: "hover:border-amber-500/20 hover:bg-amber-50/[0.01]",
-    external: false,
-  },
-  {
-    name: "skyfelis",
-    label: "// CIRCLE",
-    description:
-      "同人サークル「skyfelis」の活動案内や、同人誌・制作物、イベントへの参加情報を掲載しています。",
-    action: "サークルサイトを見る",
-    href: "https://circle.shiomiolog.com/",
-    icon: "fa-solid fa-pen-nib",
-    iconStyle: "bg-violet-500 text-white",
-    actionStyle: "text-violet-600",
-    hoverStyle: "hover:border-violet-500/20 hover:bg-violet-50/[0.01]",
     external: false,
   },
 ];
