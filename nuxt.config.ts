@@ -8,6 +8,15 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/design.css"],
 
+  nitro: {
+    cloudflare: {
+      deployConfig: true,
+      wrangler: {
+        name: "cat-skyfelis-jp",
+      },
+    },
+  },
+
   app: {
     head: {
       htmlAttrs: {
